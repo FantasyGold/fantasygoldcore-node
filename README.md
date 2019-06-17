@@ -1,0 +1,1 @@
+# fantasygoldcore-node
