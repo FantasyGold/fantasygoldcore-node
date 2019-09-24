@@ -25,7 +25,6 @@
   ],
   "dependencies": {
     "async": "^2.5.0",
-    "bitcore-lib": "^0.13.13",
     "body-parser": "^1.18.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
