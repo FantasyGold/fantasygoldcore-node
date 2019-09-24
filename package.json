@@ -47,7 +47,6 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-   
     "chai": "^4.1.2",
     "coveralls": "^3.0.1",
     "istanbul": "^0.4.3",
