@@ -5,26 +5,20 @@ set -e
 root_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/.."
 platform=`uname -a | awk '{print tolower($1)}'`
 arch=`uname -m`
-version="0.12.1"
-url="https://github.com/bitpay/bitcoin/releases/download"
-tag="v0.12.1-bitcore-4"
+version="v2.0.0"
+url="https://github.com/FantasyGold/FantasyGold-Core/releases/download"
+tag="2.0.0"
 
 if [ "${platform}" == "linux" ]; then
     if [ "${arch}" == "x86_64" ]; then
-        tarball_name="bitcoin-${version}-linux64.tar.gz"
-    elif [ "${arch}" == "x86_32" ]; then
-        tarball_name="bitcoin-${version}-linux32.tar.gz"
-    fi
-elif [ "${platform}" == "darwin" ]; then
-    tarball_name="bitcoin-${version}-osx64.tar.gz"
-else
+        tarball_name="FantasyGoldCore-${version}-Linux64.tar.gz"
+    else
     echo "Bitcoin binary distribution not available for platform and architecture"
     exit -1
 fi
 
 binary_url="${url}/${tag}/${tarball_name}"
 shasums_url="${url}/${tag}/SHA256SUMS.asc"
-
 download_bitcoind() {
 
     cd "${root_dir}/bin"
@@ -51,12 +45,12 @@ download_bitcoind() {
             echo "Unpacking bitcoin distribution"
             tar -xvzf $tarball_name
             if test $? -eq 0; then
-                ln -sf "bitcoin-${version}/bin/bitcoind"
+                ln -sf "FantasyGold-${version}/bin/fantasygoldd"
                 return;
             fi
         fi
     fi
-    echo "Bitcoin binary distribution could not be downloaded"
+    echo "FGC binary distribution could not be downloaded"
     exit -1
 }
 
@@ -83,13 +77,12 @@ verify_download() {
 }
 
 download=1
-verify=0
+verify=1
 
 if [ "${SKIP_BITCOIN_DOWNLOAD}" = 1 ]; then
     download=0;
 fi
 
-if [ "${VERIFY_BITCOIN_DOWNLOAD}" = 1 ]; then
     verify=1;
 fi
 
