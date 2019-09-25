@@ -923,7 +923,7 @@ describe('FantasyGold Service', function() {
 				}
 			};
 			var fantasygoldd = new FantasyGoldService(config);
-			fantasygoldd._getDefaultConf().rpcport.should.equal(8332);
+			fantasygoldd._getDefaultConf().rpcport.should.equal(57810);
 		});
 		it('will get default rpc port for testnet', function() {
 			var config = {
