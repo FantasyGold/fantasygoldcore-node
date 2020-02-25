@@ -1,31 +1,52 @@
 {
-  "name": "fantasygoldcore-node",
-  "description": "Full node with extended capabilities using FantasyGoldcore and FantasyGoldcoin Core",
-  "author": "FGC <nico@fantasygold.io>",
-  "version": "0.0.7",
-  "main": "./index.js",
-  "repository": "https://github.com/fantasygold/fantasygoldcore-node.git",
-  "homepage": "https://github.com/fantasygold/fantasygoldcore-node",
+  "_args": [
+    [
+      "git+https://github.com/fantasygold/fantasygoldcore-node.git#master",
+      "/home/dev/mynode"
+    ]
+  ],
+  "_from": "git+https://github.com/fantasygold/fantasygoldcore-node.git#master",
+  "_id": "fantasygoldcore-node@git+https://github.com/fantasygold/fantasygoldcore-node.git#5f2fa0f0f664d18d7e152e74a3a70eec8d86d67e",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/fantasygoldcore-node",
+  "_phantomChildren": {
+    "bn.js": "2.0.4",
+    "bs58": "2.0.0",
+    "buffer-compare": "1.0.0",
+    "elliptic": "3.0.3",
+    "inherits": "2.0.1",
+    "lodash": "4.17.15"
+  },
+  "_requested": {
+    "type": "git",
+    "raw": "git+https://github.com/fantasygold/fantasygoldcore-node.git#master",
+    "rawSpec": "git+https://github.com/fantasygold/fantasygoldcore-node.git#master",
+    "saveSpec": "git+https://github.com/fantasygold/fantasygoldcore-node.git#master",
+    "fetchSpec": "https://github.com/fantasygold/fantasygoldcore-node.git",
+    "gitCommittish": "master"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/fantasygold/fantasygoldcore-node.git#5f2fa0f0f664d18d7e152e74a3a70eec8d86d67e",
+  "_spec": "git+https://github.com/fantasygold/fantasygoldcore-node.git#master",
+  "_where": "/home/dev/mynode",
+  "author": {
+    "name": "FGC",
+    "email": "nico@fantasygold.io"
+  },
+  "bin": {
+    "fantasygoldcore-node": "./bin/fantasygoldcore-node"
+  },
   "bugs": {
     "url": "https://github.com/fantasygold/fantasygoldcore-node/issues"
   },
   "contributors": [],
-  "bin": {
-    "fantasygoldcore-node": "./bin/fantasygoldcore-node"
-  },
-  "scripts": {
-    "test": "mocha -R spec --recursive",
-    "regtest": "./scripts/regtest",
-    "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
-    "coverage": "istanbul cover _mocha -- --recursive",
-    "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
-  },
-  "tags": [
-    "fantasygold"
-  ],
   "dependencies": {
     "async": "^2.5.0",
     "body-parser": "^1.18.3",
+    "bufferutil": "~1.2.1",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
     "errno": "^0.1.4",
@@ -39,12 +60,10 @@
     "semver": "^5.0.1",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
+    "utf-8-validate": "~4.0.1",
     "zeromq": "^4.6.0"
   },
-  "optionalDependencies": {
-    "bufferutil": "~1.2.1",
-    "utf-8-validate": "~4.0.1"
-  },
+  "description": "Full node with extended capabilities using FantasyGoldcore and FantasyGoldcoin Core",
   "devDependencies": {
     "benchmark": "1.0.0",
     "chai": "^4.1.2",
@@ -57,5 +76,27 @@
     "rimraf": "^2.4.2",
     "sinon": "^4.4.8"
   },
-  "license": "MIT"
+  "homepage": "https://github.com/fantasygold/fantasygoldcore-node",
+  "license": "MIT",
+  "main": "./index.js",
+  "name": "fantasygoldcore-node",
+  "optionalDependencies": {
+    "bufferutil": "~1.2.1",
+    "utf-8-validate": "~4.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fantasygold/fantasygoldcore-node.git"
+  },
+  "scripts": {
+    "coverage": "istanbul cover _mocha -- --recursive",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
+    "regtest": "./scripts/regtest",
+    "test": "mocha -R spec --recursive"
+  },
+  "tags": [
+    "fantasygold"
+  ],
+  "version": "0.0.7"
 }
