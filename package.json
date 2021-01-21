@@ -42,7 +42,7 @@
     "fantasygoldcore-lib": "github:FantasyGold/fantasygoldcore-lib#master",
     "fantasygoldd-rpc": "github:FantasyGold/fantasygoldd-rpc#master",
     "semver": "^5.0.1",
-    "socket.io": "^1.4.5",
+    "socket.io": "^2.4.0",
     "socket.io-client": "^1.4.5",
     "zeromq": "^5.2.0"
   },
